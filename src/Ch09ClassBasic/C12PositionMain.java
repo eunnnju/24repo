@@ -13,7 +13,7 @@ class C12Position{
 	}
 	
 	C12Position(int x, int y){
-		this.x =x;
+		this.x =x; //ㅁㄴㅇㄹ
 		this.y=y;
 	}
 	
