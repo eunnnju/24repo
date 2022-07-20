@@ -7,7 +7,7 @@ public class C02Car {
 	
 	//	기능
 	void Accel(){
-		System.out.println(owner + " 님의 차가 가속합니다");
+		System.out.println(owner + " 님의 차가 가속합니다");;
 	}
 	void Break() {
 		System.out.println(owner + " 님의 차가 감속합니다");
