@@ -1,4 +1,3 @@
-# 24repo
-# study in 24
+# 24repo study in 2024
 
-[tistory](https://eun-juu.tistory.com/)
+[티스토리: tistory](https://eun-juu.tistory.com/)
