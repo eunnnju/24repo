@@ -1,3 +1,3 @@
 # 24repo study in 2024
 
-[tistory link](https://eun-juu.tistory.com/)
+[티스토리 바로가기](https://eun-juu.tistory.com/)
