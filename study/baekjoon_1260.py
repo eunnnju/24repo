@@ -1,52 +1,21 @@
-import sys
-from collections import deque
-input = sys.stdin.readline
+n = input()
+line_tmp = sorted(n)
+tmp = ''.join(map(str,line_tmp))
+tmp = int(tmp)
 
-n, m, v =map(int, input().split())
-graph = [[] for _ in range(n+1)]
+flag = 0
+for i in reversed(range(len(line_tmp))) :
+    if tmp > int(n) :
+        flag = 1
+        break
 
-dfs_list = []
-bfs_list = []
+    else:
+        line_tmp[i-1], line_tmp[i] = line_tmp[i], line_tmp[i-1]
+        tmp = ''.join(map(str, line_tmp))
+        tmp = int(tmp)
+        print(tmp)
 
-for _ in range(m): # 그래프 생성
-    i, j = map(int, input().split())
-    graph[i].append(j)
-    graph[j].append(i)
-    
-for i in range(len(graph)) : # 그래프 내부 정렬
-    graph[i] = sorted(graph[i])
-
-def bfs(v) :
-    visited = [False]*(n+1)
-
-    queue = deque()
-
-    queue.append(v)
-    bfs_list.append(v)
-
-    while queue:
-        l = queue.popleft()
-        visited[l] = True
-
-        for k in graph[l] :
-
-            if visited[k] == False:
-                visited[k] = True
-                queue.append(k)
-                bfs_list.append(k)
-            
-visited_dfs = [False] * (n+1)
-
-def dfs(v) :
-    visited_dfs[v] = True 
-    dfs_list.append(v)
-
-    for i in graph[v] :
-        if not visited_dfs[i] : 
-            dfs(i)
-
-dfs(v)
-print(*dfs_list)
-
-bfs(v)
-print(*bfs_list)
+if flag == 0:
+    print(0)
+else:
+    print(tmp)
